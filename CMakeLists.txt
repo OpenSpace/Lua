@@ -14,66 +14,66 @@ endif ()
 # LUA_USE_APICHECK  in full debug mode
 
 set (LUA_SOURCE
-    ${PROJECT_SOURCE_DIR}/src/lapi.c
-    ${PROJECT_SOURCE_DIR}/src/lauxlib.c
-    ${PROJECT_SOURCE_DIR}/src/lbaselib.c
-    ${PROJECT_SOURCE_DIR}/src/lbitlib.c
-    ${PROJECT_SOURCE_DIR}/src/lcode.c
-    ${PROJECT_SOURCE_DIR}/src/lcorolib.c
-    ${PROJECT_SOURCE_DIR}/src/lctype.c
-    ${PROJECT_SOURCE_DIR}/src/ldblib.c
-    ${PROJECT_SOURCE_DIR}/src/ldebug.c
-    ${PROJECT_SOURCE_DIR}/src/ldo.c
-    ${PROJECT_SOURCE_DIR}/src/ldump.c
-    ${PROJECT_SOURCE_DIR}/src/lfunc.c
-    ${PROJECT_SOURCE_DIR}/src/lgc.c
-    ${PROJECT_SOURCE_DIR}/src/linit.c
-    ${PROJECT_SOURCE_DIR}/src/liolib.c
-    ${PROJECT_SOURCE_DIR}/src/llex.c
-    ${PROJECT_SOURCE_DIR}/src/lmathlib.c
-    ${PROJECT_SOURCE_DIR}/src/lmem.c
-    ${PROJECT_SOURCE_DIR}/src/loadlib.c
-    ${PROJECT_SOURCE_DIR}/src/lobject.c
-    ${PROJECT_SOURCE_DIR}/src/lopcodes.c
-    ${PROJECT_SOURCE_DIR}/src/loslib.c
-    ${PROJECT_SOURCE_DIR}/src/lparser.c
-    ${PROJECT_SOURCE_DIR}/src/lstate.c
-    ${PROJECT_SOURCE_DIR}/src/lstring.c
-    ${PROJECT_SOURCE_DIR}/src/lstrlib.c
-    ${PROJECT_SOURCE_DIR}/src/ltable.c
-    ${PROJECT_SOURCE_DIR}/src/ltablib.c
-    ${PROJECT_SOURCE_DIR}/src/ltm.c
-    ${PROJECT_SOURCE_DIR}/src/lundump.c
-    ${PROJECT_SOURCE_DIR}/src/lvm.c
-    ${PROJECT_SOURCE_DIR}/src/lzio.c
+    ${LUA_ROOT_DIR}/src/lapi.c
+    ${LUA_ROOT_DIR}/src/lauxlib.c
+    ${LUA_ROOT_DIR}/src/lbaselib.c
+    ${LUA_ROOT_DIR}/src/lbitlib.c
+    ${LUA_ROOT_DIR}/src/lcode.c
+    ${LUA_ROOT_DIR}/src/lcorolib.c
+    ${LUA_ROOT_DIR}/src/lctype.c
+    ${LUA_ROOT_DIR}/src/ldblib.c
+    ${LUA_ROOT_DIR}/src/ldebug.c
+    ${LUA_ROOT_DIR}/src/ldo.c
+    ${LUA_ROOT_DIR}/src/ldump.c
+    ${LUA_ROOT_DIR}/src/lfunc.c
+    ${LUA_ROOT_DIR}/src/lgc.c
+    ${LUA_ROOT_DIR}/src/linit.c
+    ${LUA_ROOT_DIR}/src/liolib.c
+    ${LUA_ROOT_DIR}/src/llex.c
+    ${LUA_ROOT_DIR}/src/lmathlib.c
+    ${LUA_ROOT_DIR}/src/lmem.c
+    ${LUA_ROOT_DIR}/src/loadlib.c
+    ${LUA_ROOT_DIR}/src/lobject.c
+    ${LUA_ROOT_DIR}/src/lopcodes.c
+    ${LUA_ROOT_DIR}/src/loslib.c
+    ${LUA_ROOT_DIR}/src/lparser.c
+    ${LUA_ROOT_DIR}/src/lstate.c
+    ${LUA_ROOT_DIR}/src/lstring.c
+    ${LUA_ROOT_DIR}/src/lstrlib.c
+    ${LUA_ROOT_DIR}/src/ltable.c
+    ${LUA_ROOT_DIR}/src/ltablib.c
+    ${LUA_ROOT_DIR}/src/ltm.c
+    ${LUA_ROOT_DIR}/src/lundump.c
+    ${LUA_ROOT_DIR}/src/lvm.c
+    ${LUA_ROOT_DIR}/src/lzio.c
     )
 
 set (LUA_HEADER
-    ${PROJECT_SOURCE_DIR}/include/lapi.h
-    ${PROJECT_SOURCE_DIR}/include/lauxlib.h
-    ${PROJECT_SOURCE_DIR}/include/lcode.h
-    ${PROJECT_SOURCE_DIR}/include/lctype.h
-    ${PROJECT_SOURCE_DIR}/include/ldebug.h
-    ${PROJECT_SOURCE_DIR}/include/ldo.h
-    ${PROJECT_SOURCE_DIR}/include/lfunc.h
-    ${PROJECT_SOURCE_DIR}/include/lgc.h
-    ${PROJECT_SOURCE_DIR}/include/llex.h
-    ${PROJECT_SOURCE_DIR}/include/llimits.h
-    ${PROJECT_SOURCE_DIR}/include/lmem.h
-    ${PROJECT_SOURCE_DIR}/include/lobject.h
-    ${PROJECT_SOURCE_DIR}/include/lopcodes.h
-    ${PROJECT_SOURCE_DIR}/include/lparser.h
-    ${PROJECT_SOURCE_DIR}/include/lstate.h
-    ${PROJECT_SOURCE_DIR}/include/lstring.h
-    ${PROJECT_SOURCE_DIR}/include/ltable.h
-    ${PROJECT_SOURCE_DIR}/include/ltm.h
-    ${PROJECT_SOURCE_DIR}/include/lua.h
-    ${PROJECT_SOURCE_DIR}/include/lua.hpp.h
-    ${PROJECT_SOURCE_DIR}/include/luaconf.h
-    ${PROJECT_SOURCE_DIR}/include/lualib.h
-    ${PROJECT_SOURCE_DIR}/include/lundump.h
-    ${PROJECT_SOURCE_DIR}/include/lvm.h
-    ${PROJECT_SOURCE_DIR}/include/lzio.h
+    ${LUA_ROOT_DIR}/include/lapi.h
+    ${LUA_ROOT_DIR}/include/lauxlib.h
+    ${LUA_ROOT_DIR}/include/lcode.h
+    ${LUA_ROOT_DIR}/include/lctype.h
+    ${LUA_ROOT_DIR}/include/ldebug.h
+    ${LUA_ROOT_DIR}/include/ldo.h
+    ${LUA_ROOT_DIR}/include/lfunc.h
+    ${LUA_ROOT_DIR}/include/lgc.h
+    ${LUA_ROOT_DIR}/include/llex.h
+    ${LUA_ROOT_DIR}/include/llimits.h
+    ${LUA_ROOT_DIR}/include/lmem.h
+    ${LUA_ROOT_DIR}/include/lobject.h
+    ${LUA_ROOT_DIR}/include/lopcodes.h
+    ${LUA_ROOT_DIR}/include/lparser.h
+    ${LUA_ROOT_DIR}/include/lstate.h
+    ${LUA_ROOT_DIR}/include/lstring.h
+    ${LUA_ROOT_DIR}/include/ltable.h
+    ${LUA_ROOT_DIR}/include/ltm.h
+    ${LUA_ROOT_DIR}/include/lua.h
+    ${LUA_ROOT_DIR}/include/lua.hpp.h
+    ${LUA_ROOT_DIR}/include/luaconf.h
+    ${LUA_ROOT_DIR}/include/lualib.h
+    ${LUA_ROOT_DIR}/include/lundump.h
+    ${LUA_ROOT_DIR}/include/lvm.h
+    ${LUA_ROOT_DIR}/include/lzio.h
     )
 
 if (WIN32)
@@ -82,5 +82,5 @@ endif()
 
 add_library(Lua ${LUA_SOURCE})
 
-set (LUA_INCLUDE_DIR "${LUA_HEADER}")
+set (LUA_INCLUDE_DIR "${LUA_ROOT_DIR}/include")
 include_directories("${LUA_INCLUDE_DIR}")
