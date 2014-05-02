@@ -80,7 +80,7 @@ if (WIN32)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif()
 
-add_library(Lua ${LUA_SOURCE})
+add_library(Lua STATIC ${LUA_SOURCE})
 
 set (LUA_INCLUDE_DIR "${LUA_ROOT_DIR}/include")
 include_directories("${LUA_INCLUDE_DIR}")
