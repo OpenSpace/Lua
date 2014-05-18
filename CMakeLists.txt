@@ -11,7 +11,7 @@ if (NOT LUA_ROOT_DIR)
     set(LUA_ROOT_DIR ${PROJECT_SOURCE_DIR})
 endif ()
 
-# LUA_USE_APICHECK  in full debug modes
+# LUA_USE_APICHECK  in full debug modess
 
 set (LUA_SOURCE
     ${LUA_ROOT_DIR}/src/lapi.c
