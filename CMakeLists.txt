@@ -11,7 +11,7 @@ file(GLOB LUA_HEADER ${LUA_ROOT_DIR}/src/*.h)
 add_library(Lua STATIC ${LUA_SOURCE})
 
 if (WIN32)
-	target_compile_definitions(Ghoul PRIVATE "_CRT_SECURE_NO_WARNINGS")
+	target_compile_definitions(Lua PRIVATE "_CRT_SECURE_NO_WARNINGS")
 endif()
 
-target_include_directories(Ghoul PUBLIC "${LUA_ROOT_DIR}/src")
+target_include_directories(Lua PUBLIC "${LUA_ROOT_DIR}/src")
