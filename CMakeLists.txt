@@ -8,6 +8,8 @@ set(LUA_ROOT_DIR ${PROJECT_SOURCE_DIR})
 file(GLOB LUA_SOURCE ${LUA_ROOT_DIR}/src/*.c)
 file(GLOB LUA_HEADER ${LUA_ROOT_DIR}/src/*.h)
 
+list(REMOVE_ITEM LUA_SOURCE "${LUA_ROOT_DIR}/src/lua.c" "${LUA_ROOT_DIR}/src/luac.c")
+
 add_library(Lua STATIC ${LUA_SOURCE})
 
 if (WIN32)
