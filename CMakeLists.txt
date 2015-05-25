@@ -14,6 +14,9 @@ add_library(Lua STATIC ${LUA_SOURCE})
 
 if (WIN32)
 	target_compile_definitions(Lua PRIVATE "_CRT_SECURE_NO_WARNINGS")
+elseif (UNIX)
+	target_compile_definitions(Lua PRIVATE "LUA_USE_POSIX")
 endif()
+
 
 target_include_directories(Lua PUBLIC "${LUA_ROOT_DIR}/src")
