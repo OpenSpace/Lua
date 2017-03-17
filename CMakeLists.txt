@@ -18,5 +18,6 @@ elseif (UNIX)
 	target_compile_definitions(Lua PRIVATE "LUA_USE_POSIX")
 endif()
 
+target_compile_definitions(Lua PRIVATE "LUA_USE_DLOPEN")
 
 target_include_directories(Lua PUBLIC "${LUA_ROOT_DIR}/src")
