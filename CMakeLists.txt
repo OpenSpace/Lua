@@ -19,5 +19,7 @@ elseif (UNIX)
 endif()
 
 target_compile_definitions(Lua PRIVATE "LUA_USE_DLOPEN")
-
+if (UNIX)
+    target_link_libraries(Lua dl)
+endif()
 target_include_directories(Lua PUBLIC "${LUA_ROOT_DIR}/src")

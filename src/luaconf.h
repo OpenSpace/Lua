@@ -188,7 +188,12 @@
 
 #else			/* }{ */
 
-#define LUA_ROOT	"../../../bin/lib/Debug/"
+#ifdef __APPLE__
+    #define LUA_ROOT	"../../../bin/lib/Debug/"
+#else
+    #define LUA_ROOT	"../../../bin/lib/"
+#endif
+
 #define LUA_LDIR	LUA_ROOT
 #define LUA_CDIR	LUA_ROOT
 #define LUA_PATH_DEFAULT  \
